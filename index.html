@@ -1,0 +1,1017 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LUNÈ Nails & Beauty | Warszawa</title>
+  <meta name="description" content="LUNÈ Nails & Beauty w Warszawie. Manicure, pedicure, zdobienia oraz przedłużanie rzęs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --mist: #f9dad8;
+      --tea: #f4c3c6;
+      --cherry: #c65c6a;
+      --berry: #963542;
+      --wine: #5b2d35;
+      --ink: #2a1f22;
+      --olive: #7f7557;
+      --cream: #fff8f4;
+      --ivory: #fffdf9;
+      --line: rgba(91, 45, 53, 0.18);
+      --shadow: 0 20px 60px rgba(150, 53, 66, 0.16);
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --sans: "Manrope", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: var(--sans);
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+      background: rgba(255, 248, 244, 0.88);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      width: min(1180px, calc(100% - 32px));
+      min-height: 74px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      line-height: 1;
+    }
+
+    .brand-logo {
+      width: 108px;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 10px 28px rgba(150, 53, 66, 0.16);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--wine);
+    }
+
+    .nav-links a {
+      padding: 8px 0;
+      border-bottom: 1px solid transparent;
+    }
+
+    .nav-links a:hover {
+      border-color: var(--cherry);
+      color: var(--berry);
+    }
+
+    .icon-link,
+    .button {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid rgba(150, 53, 66, 0.32);
+      border-radius: 8px;
+      font-weight: 800;
+      transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+    }
+
+    .icon-link {
+      width: 44px;
+      color: var(--berry);
+      background: rgba(255, 255, 255, 0.62);
+    }
+
+    .instagram-icon {
+      width: 18px;
+      height: 18px;
+      display: block;
+      flex: 0 0 auto;
+      color: currentColor;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .button {
+      padding: 13px 18px;
+      color: var(--ivory);
+      background: var(--berry);
+      box-shadow: 0 14px 30px rgba(150, 53, 66, 0.2);
+    }
+
+    .button.secondary {
+      color: var(--wine);
+      background: rgba(255, 255, 255, 0.76);
+      box-shadow: none;
+    }
+
+    .button.booksy-button {
+      background: var(--wine);
+    }
+
+    .icon-link:hover,
+    .button:hover {
+      transform: translateY(-2px);
+      border-color: var(--berry);
+    }
+
+    .hero {
+      min-height: 82svh;
+      display: grid;
+      align-items: end;
+      position: relative;
+      overflow: hidden;
+      background-image:
+        linear-gradient(90deg, rgba(49, 22, 27, 0.68), rgba(91, 45, 53, 0.32) 46%, rgba(255, 248, 244, 0.08)),
+        url("assets/hero-salon.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 38%;
+      background: linear-gradient(0deg, rgba(255, 248, 244, 0.95), rgba(255, 248, 244, 0));
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 92px 0 82px;
+      color: var(--ivory);
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 5.8rem;
+      line-height: 0.9;
+      font-weight: 700;
+    }
+
+    .hero-copy {
+      max-width: 520px;
+      margin: 26px 0 0;
+      font-size: 1.04rem;
+      color: rgba(255, 253, 249, 0.9);
+    }
+
+    .hero-actions {
+      margin-top: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-note {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      color: rgba(255, 253, 249, 0.88);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .hero-note span {
+      padding: 9px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.36);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    section {
+      padding: 86px 0;
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .section-kicker {
+      margin: 0 0 10px;
+      color: var(--berry);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      max-width: 760px;
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 3.4rem;
+      line-height: 1;
+      font-weight: 700;
+      color: var(--wine);
+    }
+
+    .intro {
+      background: var(--cream);
+      padding-top: 50px;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    .intro-copy p {
+      max-width: 620px;
+      margin: 22px 0 0;
+      color: #574449;
+    }
+
+    .stats {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .stat {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.58);
+    }
+
+    .stat strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 2rem;
+      line-height: 1;
+      color: var(--berry);
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 8px;
+      color: var(--olive);
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .photo-stack {
+      display: grid;
+      grid-template-columns: 0.84fr 1fr;
+      gap: 14px;
+      align-items: end;
+    }
+
+    .photo-stack img {
+      width: 100%;
+      height: 390px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+    }
+
+    .photo-stack img:first-child {
+      height: 300px;
+    }
+
+    .services {
+      background: var(--ivory);
+    }
+
+    .services-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: end;
+      margin-bottom: 34px;
+    }
+
+    .services-head p {
+      max-width: 420px;
+      margin: 0;
+      color: #5f4c50;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .service-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .service-card img,
+    .service-card video {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+    }
+
+    .service-card div {
+      padding: 22px;
+    }
+
+    .service-card h3 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 1.95rem;
+      line-height: 1.05;
+      color: var(--wine);
+    }
+
+    .service-card p {
+      margin: 12px 0 0;
+      color: #604d52;
+    }
+
+    .service-card ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .service-card li {
+      padding: 7px 10px;
+      border-radius: 8px;
+      color: var(--berry);
+      background: rgba(244, 195, 198, 0.34);
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .price-section {
+      background:
+        linear-gradient(180deg, rgba(249, 218, 216, 0.96), rgba(255, 248, 244, 0.98));
+    }
+
+    .price-title {
+      margin: 0 0 54px;
+      text-align: center;
+      font-family: var(--serif);
+      font-size: 6rem;
+      line-height: 0.9;
+      color: var(--wine);
+      font-weight: 700;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 40px 58px;
+    }
+
+    .price-block {
+      min-width: 0;
+    }
+
+    .price-block.wide {
+      grid-column: 1 / -1;
+    }
+
+    .price-block h3 {
+      margin: 0 0 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid rgba(91, 45, 53, 0.62);
+      font-family: var(--serif);
+      font-size: 2.45rem;
+      line-height: 1;
+      color: var(--olive);
+      text-transform: uppercase;
+    }
+
+    .price-block h3.subhead {
+      margin-top: 42px;
+    }
+
+    .price-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .price-item {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: start;
+      padding: 9px 0;
+      color: #5a474b;
+      font-weight: 700;
+    }
+
+    .price-item span:first-child {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .price-item strong {
+      white-space: nowrap;
+      color: #5e4c32;
+      font-weight: 900;
+    }
+
+    .price-note {
+      display: block;
+      margin-top: 3px;
+      color: #7f6f73;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .lash-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 40px 58px;
+      margin-top: 40px;
+      padding-top: 44px;
+      border-top: 1px solid rgba(91, 45, 53, 0.2);
+    }
+
+    .visit {
+      background: var(--ivory);
+    }
+
+    .visit-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 48px;
+      align-items: stretch;
+    }
+
+    .visit-panel {
+      padding: 36px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--cream);
+    }
+
+    .visit-panel p {
+      color: #604d52;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .contact-booking {
+      width: 100%;
+      margin-top: 18px;
+    }
+
+    .contact-row {
+      display: grid;
+      grid-template-columns: 38px minmax(0, 1fr);
+      gap: 12px;
+      align-items: center;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.62);
+      color: var(--wine);
+      font-weight: 800;
+    }
+
+    .contact-row i,
+    .contact-row .instagram-icon {
+      color: var(--berry);
+    }
+
+    .map-card {
+      min-height: 440px;
+      overflow: hidden;
+      border-radius: 8px;
+      background: var(--cream);
+      box-shadow: var(--shadow);
+    }
+
+    .map-card iframe {
+      width: 100%;
+      height: 100%;
+      min-height: inherit;
+      display: block;
+      border: 0;
+    }
+
+    .site-footer {
+      padding: 34px 0;
+      color: var(--wine);
+      background: var(--mist);
+    }
+
+    .footer-inner {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .footer-social {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    @media (max-width: 920px) {
+      .nav {
+        min-height: 66px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 76svh;
+        background-position: 58% center;
+      }
+
+      .hero-inner {
+        padding: 76px 0 62px;
+      }
+
+      .hero h1 {
+        font-size: 4.1rem;
+      }
+
+      .intro-grid,
+      .visit-grid,
+      .services-head {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-grid,
+      .visit-grid {
+        gap: 34px;
+      }
+
+      .services-head {
+        display: grid;
+        align-items: start;
+      }
+
+      .service-grid,
+      .price-grid,
+      .lash-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .price-block.wide {
+        grid-column: auto;
+      }
+
+      .price-title {
+        font-size: 4.8rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      section {
+        padding: 62px 0;
+      }
+
+      .nav {
+        width: min(100% - 24px, 1180px);
+        min-height: 64px;
+        gap: 12px;
+      }
+
+      .brand-logo {
+        width: 80px;
+        border-radius: 6px;
+        box-shadow: 0 8px 18px rgba(150, 53, 66, 0.14);
+      }
+
+      .icon-link {
+        width: 40px;
+        min-height: 40px;
+      }
+
+      .hero h1 {
+        font-size: 3.15rem;
+      }
+
+      .hero-copy {
+        font-size: 0.98rem;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+      }
+
+      .section-title {
+        font-size: 2.55rem;
+      }
+
+      .stats,
+      .photo-stack {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card img,
+      .service-card video {
+        aspect-ratio: 5 / 4;
+      }
+
+      .photo-stack img,
+      .photo-stack img:first-child {
+        height: 260px;
+      }
+
+      .price-title {
+        margin-bottom: 34px;
+        font-size: 3.7rem;
+      }
+
+      .price-block h3 {
+        font-size: 1.95rem;
+      }
+
+      .price-item {
+        grid-template-columns: 1fr;
+        gap: 2px;
+        padding: 11px 0;
+      }
+
+      .visit-panel {
+        padding: 24px;
+      }
+
+      .map-card {
+        min-height: 380px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero h1 {
+        font-size: 2.75rem;
+      }
+
+      .section-title {
+        font-size: 2.2rem;
+      }
+
+      .service-card div {
+        padding: 18px;
+      }
+
+      .map-card {
+        min-height: 330px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Główna nawigacja">
+      <a class="brand" href="#top" aria-label="LUNÈ Nails & Beauty">
+        <img class="brand-logo" src="avartar.png" alt="LUNÈ Nails & Beauty">
+      </a>
+      <div class="nav-links">
+        <a href="#studio">Studio</a>
+        <a href="#uslugi">Usługi</a>
+        <a href="#cennik">Cennik</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+      <a class="icon-link" href="https://www.instagram.com/lune_warsaw/" target="_blank" rel="noreferrer" aria-label="Instagram LUNÈ">
+        <svg class="instagram-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <path d="M17.5 6.5h.01"></path>
+        </svg>
+      </a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="LUNÈ Nails & Beauty">
+      <div class="hero-inner">
+        <p class="eyebrow">Warszawa · Nałęczowska 62</p>
+        <h1>LUNÈ Nails & Beauty</h1>
+        <p class="hero-copy">Eleganckie studio manicure, pedicure i stylizacji rzęs. Delikatna estetyka, precyzyjne wykonanie i odcień różu dobrany do Twojego nastroju.</p>
+        <div class="hero-actions">
+          <a class="button booksy-button" href="https://booksy.com/pl-pl/331596_lune-nails-beauty_paznokcie_3_warszawa?do=invite&amp;_branch_match_id=1583094709227125011&amp;utm_medium=subdomain_instagram_bio&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVr8gI9g1yKXQqMEiyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAjxUGWDwAAAA%3D" target="_blank" rel="noreferrer">
+            <i data-lucide="calendar-days" aria-hidden="true"></i>
+            Zarezerwuj przez Booksy
+          </a>
+          <a class="button secondary" href="#cennik">
+            <i data-lucide="sparkles" aria-hidden="true"></i>
+            Zobacz cennik
+          </a>
+        </div>
+        <div class="hero-note" aria-label="Godziny otwarcia">
+          <span>Mon-Sat 09:00-20:00</span>
+          <span>Sun 09:00-16:00</span>
+          <span>Tel. 793 889 231</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="studio" class="intro">
+      <div class="wrap intro-grid">
+        <div class="intro-copy">
+          <p class="section-kicker">O studio</p>
+          <h2 class="section-title">Miękki róż, dopracowany detal i spokojny rytuał piękna.</h2>
+          <p>LUNÈ Nails & Beauty to miejsce stworzone dla estetycznych stylizacji i komfortowych wizyt. Pracujemy z manicure, pedicure, zdobieniami oraz rzęsami, dbając o czystość, trwałość i elegancki efekt końcowy.</p>
+          <div class="stats" aria-label="Atuty studia">
+            <div class="stat">
+              <strong>01</strong>
+              <span>Manicure</span>
+            </div>
+            <div class="stat">
+              <strong>02</strong>
+              <span>Pedicure</span>
+            </div>
+            <div class="stat">
+              <strong>03</strong>
+              <span>Rzęsy</span>
+            </div>
+          </div>
+        </div>
+        <div class="photo-stack" aria-label="Zdjęcia usług">
+          <img src="anh1.jpg" alt="Zdjęcie z salonu LUNÈ Nails & Beauty">
+          <img src="anh2.jpg" alt="Detal usługi beauty w LUNÈ Nails & Beauty">
+        </div>
+      </div>
+    </section>
+
+    <section id="uslugi" class="services">
+      <div class="wrap">
+        <div class="services-head">
+          <div>
+            <p class="section-kicker">Usługi</p>
+            <h2 class="section-title">Klasyka, żel, akryl i rzęsy w jednej estetyce.</h2>
+          </div>
+          <p>Zakres usług bazuje na menu LUNÈ: od oczyszczania skórek po przedłużanie, zdobienia i uzupełnienie rzęs.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <img src="anh4.jpg" alt="Manicure hybrydowy i żelowy">
+            <div>
+              <h3>Manicure</h3>
+              <p>Klasyczny, hybrydowy, żelowy, akrylowy oraz przedłużanie na tipsie lub szablonie.</p>
+              <ul>
+                <li>Hybryda</li>
+                <li>Żel</li>
+                <li>Akryl</li>
+              </ul>
+            </div>
+          </article>
+          <article class="service-card">
+            <img src="anh2.jpg" alt="Pedicure i pielęgnacja stóp">
+            <div>
+              <h3>Pedicure</h3>
+              <p>Pedicure klasyczny, hybrydowy, żelowy oraz spa z masażem stóp.</p>
+              <ul>
+                <li>Spa</li>
+                <li>Masaż</li>
+                <li>OPI</li>
+              </ul>
+            </div>
+          </article>
+          <article class="service-card">
+            <video src="longmi.mp4" autoplay muted loop playsinline aria-label="Przedłużanie rzęs"></video>
+            <div>
+              <h3>Rzęsy</h3>
+              <p>Przedłużanie od 1:1 po Mega Volume oraz indywidualne projekty typu Cat Eye, Manga i Kim K.</p>
+              <ul>
+                <li>1:1</li>
+                <li>Volume</li>
+                <li>Cat Eye</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cennik" class="price-section">
+      <div class="wrap">
+        <h2 class="price-title">Cennik</h2>
+        <div class="price-grid">
+          <article class="price-block">
+            <h3>Manicure</h3>
+            <ul class="price-list">
+              <li class="price-item"><span>Oczyszczanie skórek - kobiety</span><strong>80 PLN</strong></li>
+              <li class="price-item"><span>Oczyszczanie skórek - mężczyźni</span><strong>90 PLN</strong></li>
+              <li class="price-item"><span>Manicure klasyczny <small class="price-note">Lakiery klasyczne firmy OPI</small></span><strong>110 PLN</strong></li>
+              <li class="price-item"><span>Manicure hybrydowy</span><strong>120 PLN</strong></li>
+              <li class="price-item"><span>Przedłużanie na tipsie akrylowym / żelowym</span><strong>150 PLN</strong></li>
+              <li class="price-item"><span>Manicure żel / akryl + uzupełnienie</span><strong>140 PLN</strong></li>
+              <li class="price-item"><span>Przedłużanie na szablonie akrylowym / żelowym</span><strong>180 PLN</strong></li>
+              <li class="price-item"><span>Długość paznokci 1-2 cm</span><strong>+ 10 PLN</strong></li>
+              <li class="price-item"><span>Długość paznokci 3 cm</span><strong>+ 15 PLN</strong></li>
+              <li class="price-item"><span>Długość paznokci 4 cm</span><strong>+ 20 PLN</strong></li>
+            </ul>
+          </article>
+
+          <article class="price-block">
+            <h3>Usuwanie</h3>
+            <ul class="price-list">
+              <li class="price-item"><span>Usunięcie żelu</span><strong>45 PLN</strong></li>
+              <li class="price-item"><span>Usunięcie hybrydy</span><strong>35 PLN</strong></li>
+            </ul>
+
+            <h3 class="subhead">Zdobienia i dodatki</h3>
+            <ul class="price-list">
+              <li class="price-item"><span>Rysunek na 1 paznokciu</span><strong>od 5 PLN</strong></li>
+              <li class="price-item"><span>Wzór 3D na 1 paznokciu</span><strong>od 15 PLN</strong></li>
+              <li class="price-item"><span>Cat Eye</span><strong>+ 25 PLN</strong></li>
+              <li class="price-item"><span>Cyrkonie</span><strong>+ 30 PLN</strong></li>
+              <li class="price-item"><span>Kryształki</span><strong>+ 30 PLN</strong></li>
+              <li class="price-item"><span>French</span><strong>+ 25 PLN</strong></li>
+              <li class="price-item"><span>Baby Boomer</span><strong>+ 25 PLN</strong></li>
+              <li class="price-item"><span>Ombre</span><strong>+ 25 PLN</strong></li>
+              <li class="price-item"><span>Efekt syrenki</span><strong>+ 30 PLN</strong></li>
+            </ul>
+          </article>
+
+          <article class="price-block">
+            <h3>Pedicure</h3>
+            <ul class="price-list">
+              <li class="price-item"><span>Spa + masaż stóp</span><strong>100 PLN</strong></li>
+              <li class="price-item"><span>Oczyszczanie skórek u stóp</span><strong>110 PLN</strong></li>
+              <li class="price-item"><span>Pedicure klasyczny <small class="price-note">Lakiery klasyczne firmy OPI</small></span><strong>120 PLN</strong></li>
+              <li class="price-item"><span>Pedicure hybrydowy</span><strong>140 PLN</strong></li>
+              <li class="price-item"><span>Pedicure żelowy</span><strong>170 PLN</strong></li>
+            </ul>
+          </article>
+
+          <article class="price-block">
+            <h3>Usuwanie</h3>
+            <ul class="price-list">
+              <li class="price-item"><span>Usunięcie żelu</span><strong>50 PLN</strong></li>
+              <li class="price-item"><span>Usunięcie hybrydy</span><strong>40 PLN</strong></li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="lash-grid">
+          <article class="price-block">
+            <h3>Rzęsy - przedłużanie</h3>
+            <ul class="price-list">
+              <li class="price-item"><span>Ściągnięcie rzęs</span><strong>40 PLN</strong></li>
+              <li class="price-item"><span>Przedłużanie 1:1</span><strong>150 PLN</strong></li>
+              <li class="price-item"><span>Przedłużenie 2D - 3D</span><strong>170 PLN</strong></li>
+              <li class="price-item"><span>Przedłużenie 4D - 6D</span><strong>180 PLN</strong></li>
+              <li class="price-item"><span>Przedłużenie 7D - 10D</span><strong>200 PLN</strong></li>
+              <li class="price-item"><span>Przedłużanie Mega Volume</span><strong>220 PLN</strong></li>
+              <li class="price-item"><span>Własny projekt rzęs <small class="price-note">Cat Eye, Manga, Kim K, itd.</small></span><strong>od 150 PLN</strong></li>
+            </ul>
+          </article>
+
+          <article class="price-block">
+            <h3>Rzęsy - uzupełnienie</h3>
+            <ul class="price-list">
+              <li class="price-item"><span>Uzupełnienie 1:1</span><strong>130 PLN</strong></li>
+              <li class="price-item"><span>Uzupełnienie 2D - 3D</span><strong>140 PLN</strong></li>
+              <li class="price-item"><span>Uzupełnienie 4D - 6D</span><strong>150 PLN</strong></li>
+              <li class="price-item"><span>Uzupełnienie 7D - 10D</span><strong>170 PLN</strong></li>
+              <li class="price-item"><span>Uzupełnienie Mega Volume</span><strong>180 PLN</strong></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="visit">
+      <div class="wrap visit-grid">
+        <div class="visit-panel">
+          <p class="section-kicker">Kontakt</p>
+          <h2 class="section-title">Umów wizytę w LUNÈ.</h2>
+          <p>Najprościej zarezerwować wizytę przez Booksy albo zadzwonić lub napisać na Instagramie. Studio mieści się przy Nałęczowskiej 62 w Warszawie.</p>
+
+          <div class="contact-list">
+            <a class="contact-row" href="tel:793889231">
+              <i data-lucide="phone" aria-hidden="true"></i>
+              <span>793 889 231</span>
+            </a>
+            <a class="contact-row" href="https://www.instagram.com/lune_warsaw/" target="_blank" rel="noreferrer">
+              <svg class="instagram-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <path d="M17.5 6.5h.01"></path>
+              </svg>
+              <span>@lune_warsaw</span>
+            </a>
+            <a class="contact-row" href="https://www.google.com/maps/search/?api=1&query=Na%C5%82%C4%99czowska%2062%2C%20Warszawa%2002-922" target="_blank" rel="noreferrer">
+              <i data-lucide="map-pin" aria-hidden="true"></i>
+              <span>Nałęczowska 62, 02-922 Warszawa</span>
+            </a>
+          </div>
+          <a class="button booksy-button contact-booking" href="https://booksy.com/pl-pl/331596_lune-nails-beauty_paznokcie_3_warszawa?do=invite&amp;_branch_match_id=1583094709227125011&amp;utm_medium=subdomain_instagram_bio&amp;_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT07J0UvKz88urtRLzs%2FVr8gI9g1yKXQqMEiyrytKTUstKsrMS49PKsovL04tsnXOKMrPTQUAjxUGWDwAAAA%3D" target="_blank" rel="noreferrer">
+            <i data-lucide="calendar-days" aria-hidden="true"></i>
+            Zarezerwuj przez Booksy
+          </a>
+        </div>
+
+        <div class="map-card">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d611.6747096334743!2d21.06303837613493!3d52.17616881614552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47193338d4bc2503%3A0xb4acfee71063b32!2sLUN%C3%88%20Nails%20%26%20Beauty!5e0!3m2!1svi!2s!4v1778677045947!5m2!1svi!2s" title="Mapa LUNÈ Nails & Beauty" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 LUNÈ Nails & Beauty</span>
+      <span>Nałęczowska 62, Warszawa 02-922</span>
+      <a class="footer-social" href="https://www.instagram.com/lune_warsaw/" target="_blank" rel="noreferrer">
+        <svg class="instagram-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <path d="M17.5 6.5h.01"></path>
+        </svg>
+        lune_warsaw
+      </a>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script>
+    if (window.lucide) {
+      window.lucide.createIcons({ attrs: { width: 18, height: 18, strokeWidth: 1.8 } });
+    }
+  </script>
+</body>
+</html>
