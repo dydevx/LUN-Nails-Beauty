@@ -583,18 +583,17 @@
       font-weight: 700;
     }
 
-    .price-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 40px 58px;
+    .price-menu {
+      columns: 2 360px;
+      column-gap: 58px;
     }
 
     .price-block {
       min-width: 0;
-    }
-
-    .price-block.wide {
-      grid-column: 1 / -1;
+      width: 100%;
+      display: inline-block;
+      margin: 0 0 38px;
+      break-inside: avoid;
     }
 
     .price-block h3 {
@@ -646,15 +645,6 @@
       color: #7f6f73;
       font-size: 0.75rem;
       font-weight: 700;
-    }
-
-    .lash-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 40px 58px;
-      margin-top: 40px;
-      padding-top: 44px;
-      border-top: 1px solid rgba(91, 45, 53, 0.2);
     }
 
     .visit {
@@ -812,9 +802,8 @@
         align-items: start;
       }
 
-      .price-grid,
-      .lash-grid {
-        grid-template-columns: 1fr;
+      .price-menu {
+        columns: 1;
       }
 
       .service-grid {
@@ -829,10 +818,6 @@
 
       .video-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .price-block.wide {
-        grid-column: auto;
       }
 
       .price-title {
@@ -1215,7 +1200,7 @@
     <section id="cennik" class="price-section">
       <div class="wrap">
         <h2 class="price-title">Cennik</h2>
-        <div class="price-grid">
+        <div class="price-menu">
           <article class="price-block">
             <h3>Manicure</h3>
             <ul class="price-list">
@@ -1263,17 +1248,6 @@
               <li class="price-item"><span>Pedicure żelowy</span><strong>170 PLN</strong></li>
             </ul>
           </article>
-
-          <article class="price-block">
-            <h3>Usuwanie</h3>
-            <ul class="price-list">
-              <li class="price-item"><span>Usunięcie żelu</span><strong>50 PLN</strong></li>
-              <li class="price-item"><span>Usunięcie hybrydy</span><strong>40 PLN</strong></li>
-            </ul>
-          </article>
-        </div>
-
-        <div class="lash-grid">
           <article class="price-block">
             <h3>Rzęsy - przedłużanie</h3>
             <ul class="price-list">
@@ -1283,7 +1257,7 @@
               <li class="price-item"><span>Przedłużenie 4D - 6D</span><strong>180 PLN</strong></li>
               <li class="price-item"><span>Przedłużenie 7D - 10D</span><strong>200 PLN</strong></li>
               <li class="price-item"><span>Przedłużanie Mega Volume</span><strong>220 PLN</strong></li>
-              <li class="price-item"><span>Własny projekt rzęs <small class="price-note">Cat Eye, Manga, Kim K, itd.</small></span><strong>od 150 PLN</strong></li>
+              <li class="price-item"><span>Własny projekt rzęs</span><strong>od 150 PLN</strong></li>
             </ul>
           </article>
 
@@ -1291,10 +1265,19 @@
             <h3>Rzęsy - uzupełnienie</h3>
             <ul class="price-list">
               <li class="price-item"><span>Uzupełnienie 1:1</span><strong>130 PLN</strong></li>
-              <li class="price-item"><span>Uzupełnienie 2D - 3D</span><strong>140 PLN</strong></li>
-              <li class="price-item"><span>Uzupełnienie 4D - 6D</span><strong>150 PLN</strong></li>
-              <li class="price-item"><span>Uzupełnienie 7D - 10D</span><strong>170 PLN</strong></li>
-              <li class="price-item"><span>Uzupełnienie Mega Volume</span><strong>180 PLN</strong></li>
+              <li class="price-item"><span>Uzupełnienie 2D - 3D</span><strong>150 PLN</strong></li>
+              <li class="price-item"><span>Uzupełnienie 4D - 6D</span><strong>160 PLN</strong></li>
+              <li class="price-item"><span>Uzupełnienie 7D - 10D</span><strong>180 PLN</strong></li>
+              <li class="price-item"><span>Uzupełnienie Mega Volume</span><strong>200 PLN</strong></li>
+            </ul>
+          </article>
+
+          <article class="price-block">
+            <h3>Dodatki</h3>
+            <ul class="price-list">
+              <li class="price-item"><span>Zdjęcie rzęs przed przedłużaniem</span><strong>+20 PLN</strong></li>
+              <li class="price-item"><span>Efekt: Kim K / Wispy / Wetlook</span><strong>+20 PLN</strong></li>
+              <li class="price-item"><span>Przedłużenie dolnych rzęs</span><strong>+50 PLN</strong></li>
             </ul>
           </article>
         </div>
