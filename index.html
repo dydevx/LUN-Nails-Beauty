@@ -583,17 +583,30 @@
       font-weight: 700;
     }
 
+    .price-intro {
+      max-width: 660px;
+      margin: -36px auto 38px;
+      text-align: center;
+      color: #5f4c50;
+      font-weight: 700;
+    }
+
     .price-menu {
-      columns: 2 360px;
-      column-gap: 58px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 58px;
+      align-items: start;
+    }
+
+    .price-column {
+      display: grid;
+      gap: 38px;
     }
 
     .price-block {
       min-width: 0;
       width: 100%;
-      display: inline-block;
-      margin: 0 0 38px;
-      break-inside: avoid;
+      margin: 0;
     }
 
     .price-block h3 {
@@ -605,10 +618,6 @@
       line-height: 1;
       color: var(--olive);
       text-transform: uppercase;
-    }
-
-    .price-block h3.subhead {
-      margin-top: 42px;
     }
 
     .price-list {
@@ -803,7 +812,8 @@
       }
 
       .price-menu {
-        columns: 1;
+        grid-template-columns: 1fr;
+        gap: 38px;
       }
 
       .service-grid {
@@ -927,6 +937,20 @@
       .price-title {
         margin-bottom: 34px;
         font-size: 3.7rem;
+      }
+
+      .price-intro {
+        margin: -18px auto 28px;
+        font-size: 0.92rem;
+      }
+
+      .price-menu {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .price-column {
+        gap: 34px;
       }
 
       .price-block h3 {
@@ -1200,86 +1224,58 @@
     <section id="cennik" class="price-section">
       <div class="wrap">
         <h2 class="price-title">Cennik</h2>
+        <p class="price-intro">Aktualne menu uslug LUNÈ Nails &amp; Beauty według cennika Booksy.</p>
         <div class="price-menu">
-          <article class="price-block">
-            <h3>Manicure</h3>
-            <ul class="price-list">
-              <li class="price-item"><span>Oczyszczanie skórek - kobiety</span><strong>80 PLN</strong></li>
-              <li class="price-item"><span>Oczyszczanie skórek - mężczyźni</span><strong>90 PLN</strong></li>
-              <li class="price-item"><span>Manicure klasyczny <small class="price-note">Lakiery klasyczne firmy OPI</small></span><strong>110 PLN</strong></li>
-              <li class="price-item"><span>Manicure hybrydowy</span><strong>120 PLN</strong></li>
-              <li class="price-item"><span>Przedłużanie na tipsie akrylowym / żelowym</span><strong>150 PLN</strong></li>
-              <li class="price-item"><span>Manicure żel / akryl + uzupełnienie</span><strong>140 PLN</strong></li>
-              <li class="price-item"><span>Przedłużanie na szablonie akrylowym / żelowym</span><strong>180 PLN</strong></li>
-              <li class="price-item"><span>Długość paznokci 1-2 cm</span><strong>+ 10 PLN</strong></li>
-              <li class="price-item"><span>Długość paznokci 3 cm</span><strong>+ 15 PLN</strong></li>
-              <li class="price-item"><span>Długość paznokci 4 cm</span><strong>+ 20 PLN</strong></li>
-            </ul>
-          </article>
+          <div class="price-column">
+            <article class="price-block">
+              <h3>Oczyszczanie skórek</h3>
+              <ul class="price-list">
+                <li class="price-item"><span>Oczyszczanie skórek u paznokci - kobiety <small class="price-note">30 min</small></span><strong>70 PLN</strong></li>
+                <li class="price-item"><span>Oczyszczanie skórek u paznokci - mężczyźni <small class="price-note">30 min</small></span><strong>80 PLN</strong></li>
+                <li class="price-item"><span>Oczyszczanie skórek u stóp <small class="price-note">40 min</small></span><strong>90 PLN</strong></li>
+              </ul>
+            </article>
 
-          <article class="price-block">
-            <h3>Usuwanie</h3>
-            <ul class="price-list">
-              <li class="price-item"><span>Usunięcie żelu</span><strong>45 PLN</strong></li>
-              <li class="price-item"><span>Usunięcie hybrydy</span><strong>35 PLN</strong></li>
-            </ul>
+            <article class="price-block">
+              <h3>Pedicure</h3>
+              <ul class="price-list">
+                <li class="price-item"><span>Spa + masaż stóp <small class="price-note">50 min</small></span><strong>90 PLN</strong></li>
+                <li class="price-item"><span>Pedicure klasyczny <small class="price-note">1 h 10 min</small></span><strong>110 PLN</strong></li>
+                <li class="price-item"><span>Pedicure hybrydowy <small class="price-note">1 h 10 min</small></span><strong>130 PLN</strong></li>
+              </ul>
+            </article>
 
-            <h3 class="subhead">Zdobienia i dodatki</h3>
-            <ul class="price-list">
-              <li class="price-item"><span>Rysunek na 1 paznokciu</span><strong>od 5 PLN</strong></li>
-              <li class="price-item"><span>Wzór 3D na 1 paznokciu</span><strong>od 15 PLN</strong></li>
-              <li class="price-item"><span>Cat Eye</span><strong>+ 25 PLN</strong></li>
-              <li class="price-item"><span>Cyrkonie</span><strong>+ 30 PLN</strong></li>
-              <li class="price-item"><span>Kryształki</span><strong>+ 30 PLN</strong></li>
-              <li class="price-item"><span>French</span><strong>+ 25 PLN</strong></li>
-              <li class="price-item"><span>Baby Boomer</span><strong>+ 25 PLN</strong></li>
-              <li class="price-item"><span>Ombre</span><strong>+ 25 PLN</strong></li>
-              <li class="price-item"><span>Efekt syrenki</span><strong>+ 30 PLN</strong></li>
-            </ul>
-          </article>
+            <article class="price-block">
+              <h3>Usuwanie manicure</h3>
+              <ul class="price-list">
+                <li class="price-item"><span>Usunięcie hybrydy + odżywka <small class="price-note">15 min</small></span><strong>35 PLN</strong></li>
+                <li class="price-item"><span>Usunięcie żelu + odżywka <small class="price-note">20 min</small></span><strong>45 PLN</strong></li>
+              </ul>
+            </article>
+          </div>
 
-          <article class="price-block">
-            <h3>Pedicure</h3>
-            <ul class="price-list">
-              <li class="price-item"><span>Spa + masaż stóp</span><strong>100 PLN</strong></li>
-              <li class="price-item"><span>Oczyszczanie skórek u stóp</span><strong>110 PLN</strong></li>
-              <li class="price-item"><span>Pedicure klasyczny <small class="price-note">Lakiery klasyczne firmy OPI</small></span><strong>120 PLN</strong></li>
-              <li class="price-item"><span>Pedicure hybrydowy</span><strong>140 PLN</strong></li>
-              <li class="price-item"><span>Pedicure żelowy</span><strong>170 PLN</strong></li>
-            </ul>
-          </article>
-          <article class="price-block">
-            <h3>Rzęsy - przedłużanie</h3>
-            <ul class="price-list">
-              <li class="price-item"><span>Ściągnięcie rzęs</span><strong>40 PLN</strong></li>
-              <li class="price-item"><span>Przedłużanie 1:1</span><strong>150 PLN</strong></li>
-              <li class="price-item"><span>Przedłużenie 2D - 3D</span><strong>170 PLN</strong></li>
-              <li class="price-item"><span>Przedłużenie 4D - 6D</span><strong>180 PLN</strong></li>
-              <li class="price-item"><span>Przedłużenie 7D - 10D</span><strong>200 PLN</strong></li>
-              <li class="price-item"><span>Przedłużanie Mega Volume</span><strong>220 PLN</strong></li>
-              <li class="price-item"><span>Własny projekt rzęs</span><strong>od 150 PLN</strong></li>
-            </ul>
-          </article>
+          <div class="price-column">
+            <article class="price-block">
+              <h3>Dodatki</h3>
+              <ul class="price-list">
+                <li class="price-item"><span>Wzorek na 1 paznokciu <small class="price-note">+5 min</small></span><strong>5 PLN+</strong></li>
+                <li class="price-item"><span>Wzór 3D na 1 paznokciu <small class="price-note">+10 min</small></span><strong>10 PLN</strong></li>
+                <li class="price-item"><span>Efekt Cat Eye <small class="price-note">+5 min</small></span><strong>20 PLN</strong></li>
+                <li class="price-item"><span>Cyrkonie / Kryształki <small class="price-note">+15 min</small></span><strong>20 PLN</strong></li>
+                <li class="price-item"><span>French <small class="price-note">+10 min</small></span><strong>20 PLN</strong></li>
+                <li class="price-item"><span>Baby Boomer <small class="price-note">+10 min</small></span><strong>20 PLN</strong></li>
+                <li class="price-item"><span>Efekt syrenki <small class="price-note">+15 min</small></span><strong>20 PLN</strong></li>
+              </ul>
+            </article>
 
-          <article class="price-block">
-            <h3>Rzęsy - uzupełnienie</h3>
-            <ul class="price-list">
-              <li class="price-item"><span>Uzupełnienie 1:1</span><strong>130 PLN</strong></li>
-              <li class="price-item"><span>Uzupełnienie 2D - 3D</span><strong>150 PLN</strong></li>
-              <li class="price-item"><span>Uzupełnienie 4D - 6D</span><strong>160 PLN</strong></li>
-              <li class="price-item"><span>Uzupełnienie 7D - 10D</span><strong>180 PLN</strong></li>
-              <li class="price-item"><span>Uzupełnienie Mega Volume</span><strong>200 PLN</strong></li>
-            </ul>
-          </article>
-
-          <article class="price-block">
-            <h3>Dodatki</h3>
-            <ul class="price-list">
-              <li class="price-item"><span>Zdjęcie rzęs przed przedłużaniem</span><strong>+20 PLN</strong></li>
-              <li class="price-item"><span>Efekt: Kim K / Wispy / Wetlook</span><strong>+20 PLN</strong></li>
-              <li class="price-item"><span>Przedłużenie dolnych rzęs</span><strong>+50 PLN</strong></li>
-            </ul>
-          </article>
+            <article class="price-block">
+              <h3>Usuwanie pedicure</h3>
+              <ul class="price-list">
+                <li class="price-item"><span>Usunięcie hybrydy + odżywka <small class="price-note">15 min</small></span><strong>40 PLN</strong></li>
+                <li class="price-item"><span>Usunięcie żelu + odżywka <small class="price-note">20 min</small></span><strong>50 PLN</strong></li>
+              </ul>
+            </article>
+          </div>
         </div>
       </div>
     </section>
